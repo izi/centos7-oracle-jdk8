@@ -10,3 +10,6 @@ RUN yum -y install wget && \
     rpm -Uvh jdk-8u31-linux-x64.rpm && \
     yum -y remove wget && \
     rm -f jdk-8u31-linux-x64.rpm MD5SUM
+
+COPY US_export_policy.jar /usr/java/jdk1.8.0_31/jre/lib/security/US_export_policy.jar
+COPY local_policy.jar /usr/java/jdk1.8.0_31/jre/lib/security/local_policy.jar
